@@ -44,7 +44,9 @@ module OmniAuth
         }
         query_param = generate_sign(query_param)
         res = Net::HTTP.post_form(URI.parse(url), query_param)
-        @raw_info ||= MultiJson.decode(res.body)['user_get_response']['user']
+        response = MultiJson.decode(res.body)
+        raise OmniAuth::Error.new(response['error_response']) if response.has_key?('error_response')
+        @raw_info ||= response['user_get_response']['user']
       rescue ::Errno::ETIMEDOUT
         raise ::Timeout::Error
       end

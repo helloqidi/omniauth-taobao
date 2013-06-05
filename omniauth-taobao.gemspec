@@ -12,8 +12,8 @@ Gem::Specification.new do |s|
   s.description = %q{an omniauth strategy for taobao}
 
   s.rubyforge_project = "omniauth-taobao"
-  s.add_dependency 'omniauth', '~> 1.0.0.rc2'
-  s.add_dependency 'omniauth-oauth2', '~> 1.0.0.rc2'
+  s.add_dependency 'omniauth', '~> 1.1.4'
+  s.add_dependency 'omniauth-oauth2', '~> 1.1.1'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
