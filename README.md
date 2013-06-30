@@ -1,4 +1,4 @@
-### How to make it work with Taobao
+### How does omniauth-taobao work with Taobao
 
 #### API permission levels
 
