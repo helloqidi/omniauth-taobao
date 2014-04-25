@@ -16,8 +16,8 @@ module OmniAuth
       }
 
       option :client_options, {
-        :authorize_url => 'https://oauth.taobao.com/authorize',
-        :token_url => 'https://oauth.taobao.com/token',
+        :authorize_url => 'https://oauth.tbsandbox.com/authorize',
+        :token_url => 'https://oauth.tbsandbox.com/token',
       }
       def request_phase
         options[:state] ||= '1'
@@ -39,7 +39,7 @@ module OmniAuth
       end
 
       def raw_info
-        url = 'http://gw.api.taobao.com/router/rest'
+        url = 'https://gw.api.tbsandbox.com/router/rest'
 
         user_type = options.client_options.user_type || :default
         query_param = {
