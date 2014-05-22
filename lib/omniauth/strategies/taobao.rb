@@ -29,8 +29,10 @@ module OmniAuth
       info do
         {
           'uid' => raw_info['uid'],
+          'user_id' => raw_info['user_id'],
           'nickname' => raw_info['nick'],
-          'email' => raw_info['email'],
+          'type' => raw_info['type'],
+          'seller_credit' => raw_info['seller_credit'],
           'user_info' => raw_info,
           'extra' => {
             'user_hash' => raw_info,
